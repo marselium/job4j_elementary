@@ -9,6 +9,6 @@ public class TrgArea {
 
     public static void main(String[] args) {
         double rslt = TrgArea.area(2, 2, 2);
-        System.out.println(rslt);
+        System.out.println("Triangle area is" + rslt);
     }
 }
