@@ -12,17 +12,19 @@ public class Converter {
     }
 
     public static void main(String[] args) {
-        float euro = Converter.rubleToEuro(300);
-        float dollar = Converter.rubleToDollar(400);
-        float ein = euro * 70;
-        float eexpected = euro;
-        float eout = Converter.rubleToEuro(ein);
-        boolean epassed = eexpected == eout;
-        System.out.println((euro * 70) + " rubles are " + euro + ". Test result : " + epassed);
-        float din = dollar * 60;
-        float dexpected = dollar;
-        float dout = Converter.rubleToDollar(din);
-        boolean dpassed = dexpected == dout;
-        System.out.println((dollar * 70) + " rubles are " + dollar + ". Test result : " + dpassed);
+        float euro = Converter.rubleToEuro(140);
+        float dollar = Converter.rubleToDollar(120);
+        System.out.println((euro * 70) + " rubles are " + euro + " euro");
+        System.out.println((dollar * 60) + "rubles are" + dollar + " dollar");
+        float in = 140;
+        float expected = 2;
+        float out = Converter.rubleToEuro(in);
+        boolean passed = expected == out;
+        System.out.println("140 rubles are 2. Test result : " + passed);
+        float dollarin = 120;
+        float dollarexpected = 2;
+        float dollarout = Converter.rubleToEuro(dollarin);
+        boolean dollarpassed = dollarexpected == dollarout;
+        System.out.println("140 rubles are 2. Test result : " + dollarpassed);
     }
 }
