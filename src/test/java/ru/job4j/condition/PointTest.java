@@ -40,7 +40,7 @@ public class PointTest {
     }
 
     @Test
-    public void whenBigNumbers() {
+    public void when1414to10050012001000then995999() {
         double expected = 995999;
         int x1 = 14;
         int x2 = 14;
