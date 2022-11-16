@@ -1,7 +1,6 @@
 package ru.job4j.condition;
 
 import org.junit.jupiter.api.Test;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ThreeMaxTest {
@@ -37,11 +36,11 @@ public class ThreeMaxTest {
 
     @Test
     public void allEq() {
-        int first = 2;
-        int second = 2;
-        int third = 2;
+        int first = 1;
+        int second = 1;
+        int third = 1;
         int result = ThreeMax.max(first, second, third);
-        int expected = 2;
+        int expected = 1;
         assertThat(result).isEqualTo(expected);
     }
 
