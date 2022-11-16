@@ -15,6 +15,6 @@ public class MultipleSwitchWeek {
     }
 
     public static void main(String[] args) {
-        System.out.println(numberOfDay("ааа"));
+        System.out.println(numberOfDay("Понедельник"));
     }
 }
