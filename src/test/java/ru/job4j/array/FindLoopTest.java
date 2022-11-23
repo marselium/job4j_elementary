@@ -15,12 +15,32 @@ public class FindLoopTest {
 
     @Test
     public void whenArrayHasNot10ThenMinus1() {
-        int[] data = new int[] {3, 11, 22};
+        int[] data = new int[]{3, 11, 22};
         int el = 10;
         int result = FindLoop.indexOf(data, el);
         int expected = -1;
         assertThat(result).isEqualTo(expected);
-        /* «десь нужно дописать тест, когда в массиве не найдено число 10.
-        ћожно искать любое другое число, корректно изменив при этом название теста */
+    }
+
+    @Test
+    public void whenDiapasonHas8ThenResultEqualFinish() {
+        int[] data = new int[]{5, 2, 10, 2, 4, 8, 14, 3, 21, 16};
+        int el = 8;
+        int start = 2;
+        int finish = 5;
+        int result = FindLoop.indexInRange(data, el, start, finish);
+        int expected = 5;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void whenDiapasonHasNot8ThenMinus1() {
+        int[] data = new int[]{5, 2, 10, 2, 4};
+        int el = 8;
+        int start = 2;
+        int finish = 4;
+        int result = FindLoop.indexInRange(data, el, start, finish);
+        int expected = -1;
+        assertThat(result).isEqualTo(expected);
     }
 }
