@@ -6,47 +6,38 @@ import org.junit.Assert;
 public class PointTest {
 
     @Test
-    public void when00to20then2() {
-        double expected = 2;
-        int x1 = 0;
-        int x2 = 0;
-        int y1 = 2;
-        int y2 = 0;
-        double out = Point.dist(x1, x2, y1, y2);
-        Assert.assertEquals(expected, out, 0.01);
-
+    public void when00to02then2() {
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+        double dist = a.distance(b);
+        double expected = 2.0;
+        Assert.assertEquals(expected, dist, 0.01);
     }
 
     @Test
     public void when11to51then4() {
-        double expected = 4;
-        int x1 = 1;
-        int x2 = 1;
-        int y1 = 5;
-        int y2 = 1;
-        double out = Point.dist(x1, x2, y1, y2);
-        Assert.assertEquals(expected, out, 0.01);
+        Point a = new Point(1, 1);
+        Point b = new Point(5, 1);
+        double dist = a.distance(b);
+        double expected = 4.0;
+        Assert.assertEquals(expected, dist, 0.01);
     }
 
     @Test
-    public void when1422to3047then18pt79() {
-        double expected = 18.79;
-        int x1 = 14;
-        int x2 = 22;
-        int y1 = 30;
-        int y2 = 47;
-        double out = Point.dist(x1, x2, y1, y2);
-        Assert.assertEquals(expected, out, 0.01);
+    public void when1422to3047then29pt68() {
+        Point a = new Point(14, 22);
+        Point b = new Point(30, 47);
+        double dist = a.distance(b);
+        double expected = 29.68;
+        Assert.assertEquals(expected, dist, 0.01);
     }
 
     @Test
-    public void when1414to10050012001000then995999() {
-        double expected = 995999;
-        int x1 = 14;
-        int x2 = 14;
-        int y1 = 1005001;
-        int y2 = 2001000;
-        double out = Point.dist(x1, x2, y1, y2);
-        Assert.assertEquals(expected, out, 0.001);
+    public void when14100500to141200100then995999() {
+        Point a = new Point(14, 100500);
+        Point b = new Point(14, 200600);
+        double dist = a.distance(b);
+        double expected = 100100.0;
+        Assert.assertEquals(expected, dist, 0.01);
     }
 }
